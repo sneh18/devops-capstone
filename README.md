@@ -1,1 +1,1 @@
-# upgrad-capstone
+# DevOps Capstone Project
