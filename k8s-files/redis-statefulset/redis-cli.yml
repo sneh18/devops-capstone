@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rediscli
+  namespace: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      demo: demo
+  template:
+    metadata:
+      name: rediscli
+      namespace: demo
+      labels:
+        demo: demo
+        namespace: demo
+    spec:
+      restartPolicy: Always
+      containers:
+        - name: rediscli
+          image: redis
+          command: ["/bin/sh"]
+          args: ["-c", "sleep 100000"]

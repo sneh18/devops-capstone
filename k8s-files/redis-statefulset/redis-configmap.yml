@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-ss-configuration
+  namespace: demo
+  labels:
+    app: redis
+data:
+  master.conf: |
+    timeout 300
+    appendonly yes
+    protected-mode no
+    dbfilename dump.rdb
+    dir /var/lib/redis
