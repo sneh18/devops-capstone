@@ -11,7 +11,7 @@ module "vpc" {
   enable_nat_gateway = true
 
   tags = {
-    "kubernetes.io/cluster/eks-cluster" = "owned"
+    "kubernetes.io/cluster/my-eks-201" = "owned"
     "Owner" = "Sneh Dalal"
     "Terraform" = "true"
   }
